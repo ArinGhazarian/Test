@@ -8,7 +8,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: callEcho
-              uses: actions/call-echo
+              uses: ./.github/actions/call-echo
               with:
                 arg1: "hello"
                 arg2: "world"
