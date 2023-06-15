@@ -1,9 +1,12 @@
 name: callEcho method
+description: callEcho method via composite actions
 inputs:
   arg1:
+    description: arg1
     required: true
     default: "hello"
   arg2:
+    description: arg2
     required: true
     default: "world"
 runs:
@@ -11,5 +14,7 @@ runs:
   steps:
     - name: Runs echo arg1
       run: echo ${{ inputs.arg1 }}
+      shell: bash
     - name: Runs echo arg2
       run: echo ${{ input.arg2 }}
+      shell: bash
