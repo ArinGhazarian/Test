@@ -18,3 +18,9 @@ runs:
     - name: Runs echo arg2
       run: echo ${{ inputs.arg2 }}
       shell: bash
+    - name: greetMe('arin')
+      uses: ./.github/actions/greet-me
+      with:
+        name: "arin"
+    - name: greetMe()
+      uses: ./.github/actions/greet-me

@@ -1,0 +1,13 @@
+name: greetMe method
+description: greetMe method via composite actions
+inputs:
+  name:
+    description: name
+    required: true
+    default: "test"
+runs:
+  using: "composite"
+  steps:
+    - name: Runs echo name
+      run: echo ${{ inputs.name }}
+      shell: bash
