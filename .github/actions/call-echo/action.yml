@@ -16,5 +16,5 @@ runs:
       run: echo ${{ inputs.arg1 }}
       shell: bash
     - name: Runs echo arg2
-      run: echo ${{ input.arg2 }}
+      run: echo ${{ inputs.arg2 }}
       shell: bash
