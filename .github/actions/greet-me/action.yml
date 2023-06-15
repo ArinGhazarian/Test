@@ -5,9 +5,21 @@ inputs:
     description: name
     required: true
     default: "test"
+outputs:
+  result:
+    description: output
+    value: ${{ steps.return.outputs.value}}
 runs:
   using: "composite"
   steps:
     - name: Runs echo name
       run: echo ${{ inputs.name }}
+      shell: bash
+    - name: return
+      id: return
+      run: |
+        if [ "${{ inputs.name}}" != """] 
+          echo "value=true" >> $GITHUB_OUTPUT
+        else
+          echo "value=false" >> $GITHUB_OUTPUT
       shell: bash

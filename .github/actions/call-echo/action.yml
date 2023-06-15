@@ -19,8 +19,16 @@ runs:
       run: echo ${{ inputs.arg2 }}
       shell: bash
     - name: greetMe('arin')
+      id: greet1
       uses: ./.github/actions/greet-me
       with:
         name: "arin"
     - name: greetMe()
+      id: greet2
       uses: ./.github/actions/greet-me
+    - name: output1
+      run: echo output 1 is ${{ steps.greet1.outputs.value }}
+      shell: bash
+    - name: output2
+      run: echo output 2 is ${{ steps.greet2.outputs.value }}
+      shell: bash
