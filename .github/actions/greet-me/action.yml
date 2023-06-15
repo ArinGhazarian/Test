@@ -18,7 +18,7 @@ runs:
     - name: return
       id: return
       run: |
-        if [ "${{ inputs.name}}" != """] 
+        if [ "${{ inputs.name}}" != ""] 
           echo "value=true" >> $GITHUB_OUTPUT
         else
           echo "value=false" >> $GITHUB_OUTPUT
