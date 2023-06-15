@@ -1,0 +1,14 @@
+name: Simple method call
+on:
+    workflow_dispatch
+jobs:
+    Untitled_1:
+        name: Untitled_1
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: callEcho
+              uses: actions/call-echo
+              with:
+                arg1: "hello"
+                arg2: "world"

@@ -1,0 +1,15 @@
+name: callEcho method
+inputs:
+  arg1:
+    required: true
+    default: "hello"
+  arg2:
+    required: true
+    default: "world"
+runs:
+  using: "composite"
+  steps:
+    - name: Runs echo arg1
+      run: echo ${{ inputs.arg1 }}
+    - name: Runs echo arg2
+      run: echo ${{ input.arg2 }}
