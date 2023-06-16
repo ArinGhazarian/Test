@@ -16,5 +16,9 @@ runs:
       run: echo ${{ inputs.name }}
       shell: bash
     - id: return-value
-      run: echo "return-value=true" >> $GITHUB_OUTPUT
+      run: |
+        if [ "${{ inputs.name }}" != "test" ]; then
+          echo "return-value=true" >> $GITHUB_OUTPUT;
+        else
+          echo "return-value=false" >> $GITHUB_OUTPUT;
       shell: bash
