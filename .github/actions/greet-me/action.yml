@@ -16,5 +16,5 @@ runs:
       run: echo ${{ inputs.name }}
       shell: bash
     - id: random-number-generator
-      run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
+      run: echo "random-number=true" >> $GITHUB_OUTPUT
       shell: bash
