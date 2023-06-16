@@ -6,9 +6,9 @@ inputs:
     required: true
     default: "test"
 outputs:
-  random-number:
+  return-value:
     description: random number
-    value: ${{ steps.return-value.outputs.result }}
+    value: ${{ steps.return-value.outputs.return-value }}
 runs:
   using: "composite"
   steps:
@@ -16,5 +16,5 @@ runs:
       run: echo ${{ inputs.name }}
       shell: bash
     - id: return-value
-      run: echo "result=true" >> $GITHUB_OUTPUT
+      run: echo "return-value=true" >> $GITHUB_OUTPUT
       shell: bash
