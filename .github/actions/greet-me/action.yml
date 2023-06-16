@@ -21,4 +21,5 @@ runs:
           echo "return-value=true" >> $GITHUB_OUTPUT;
         else
           echo "return-value=false" >> $GITHUB_OUTPUT;
+        fi
       shell: bash
