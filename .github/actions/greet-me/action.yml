@@ -17,5 +17,5 @@ runs:
       shell: bash
     - name: return
       id: return
-      run: echo "value=true" >> $GITHUB_OUTPUT;
+      run: echo "value=true" >> $GITHUB_OUTPUT
       shell: bash
