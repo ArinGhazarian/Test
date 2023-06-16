@@ -8,7 +8,7 @@ inputs:
 outputs:
   random-number:
     description: random number
-    value: ${{ steps.return-value.outputs.return-value }}
+    value: ${{ steps.return-value.outputs.result }}
 runs:
   using: "composite"
   steps:
@@ -17,5 +17,5 @@ runs:
       shell: bash
     - name: return value
       id: return-value
-      run: echo "return-value=true" >> $GITHUB_OUTPUT
+      run: echo "result=true" >> $GITHUB_OUTPUT
       shell: bash
