@@ -27,8 +27,8 @@ runs:
       id: greet2
       uses: ./.github/actions/greet-me
     - name: output1
-      run: echo output 1 is ${{ steps.greet1.outputs.value }}
+      run: echo output 1 is ${{ steps.greet1.outputs.random-number }}
       shell: bash
     - name: output2
-      run: echo output 2 is ${{ steps.greet2.outputs.value }}
+      run: echo output 2 is ${{ steps.greet2.outputs.random-number }}
       shell: bash
