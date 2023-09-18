@@ -1,4 +1,4 @@
-name: arin/simple_method_call
+name: play with status checks 
 on:
   workflow_dispatch:
 jobs:
