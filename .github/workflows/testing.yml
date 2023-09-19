@@ -17,6 +17,6 @@ jobs:
       if: ${{ !cancelled() }}
       id: step-3
     - name: Should this be displayed? 
-      run: echo ${{ steps.step-3.outcome }}
+      run: echo ${{ steps.step-3.conclusion }}
       id: step-4
       if: ${{ !cancelled() }}
