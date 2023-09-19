@@ -13,7 +13,7 @@ jobs:
       run: echo 
       id: step-2
     - name: Should run despite failure
-      run: echo "this should display despite previous failure"
+      run: echo ${{ steps.step-2.outcome }}
       if: ${{ !cancelled() }}
       id: step-3
     - name: Should this be displayed? 
