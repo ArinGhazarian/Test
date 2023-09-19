@@ -18,4 +18,4 @@ jobs:
       id: step-3
     - name: Should this be displayed? 
       run: echo ${{ steps.step-3.outcome }}
-      id: step-4
+      id: ${{ !cancelled() }}
