@@ -1,4 +1,4 @@
-name: arin/simple_method_call
+name: test
 on:
   workflow_dispatch:
 jobs:
