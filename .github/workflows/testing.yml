@@ -1,4 +1,4 @@
-name: play with status checks 
+name: arin/simple_method_call
 on:
   workflow_dispatch:
 jobs:
@@ -8,10 +8,14 @@ jobs:
     steps:
     - name: Fails
       run: exit 1
+      id: step-1
     - name: Does not run
-      run: echo "this should not display"
+      run: echo 
+      id: step-2
     - name: Should run despite failure
       run: echo "this should display despite previous failure"
       if: ${{ !cancelled() }}
+      id: step-3
     - name: Should this be displayed? 
-      run: echo "not sure"
+      run: echo ${{ steps.step-3.outcome }}
+      id: step-4
