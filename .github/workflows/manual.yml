@@ -31,4 +31,4 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
     - name: Test Annotation
-      run: echo "::notice title="Docker image tag for Test"::123456"
+      run: echo "::notice title=Docker-image-tag::123456"
